@@ -1,0 +1,11 @@
+es-MX:
+  activerecord:
+    models:
+      agency:
+        one: Agencia
+        other: Agencias
+    attributes:
+      agency:
+        name: Nombre
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
