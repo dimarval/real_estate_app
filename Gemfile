@@ -54,6 +54,10 @@ group :development, :test do
 
   # Testing framework for Rails
   gem 'rspec-rails', '~> 3.7'
+
+  # This gem brings back assigns to your controller tests as well as
+  # assert_template to both controller and integration tests
+  gem 'rails-controller-testing', '~> 1.0'
 end
 
 group :development do
