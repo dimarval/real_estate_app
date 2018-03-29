@@ -26,4 +26,11 @@ ActiveRecord::Schema.define(version: 20180329221247) do
     t.index ["code"], name: "index_currencies_on_code", unique: true
   end
 
+  create_table "measurement_units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "code", limit: 32, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_measurement_units_on_code", unique: true
+  end
+
 end
