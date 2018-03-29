@@ -17,5 +17,6 @@ module RealEstateApp
 
     # Internationalization and localization config
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.i18n.default_locale = :'es-MX'
   end
 end
