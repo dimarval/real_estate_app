@@ -51,6 +51,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+
+  # Testing framework for Rails
+  gem 'rspec-rails', '~> 3.7'
 end
 
 group :development do
