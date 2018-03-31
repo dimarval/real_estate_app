@@ -1,5 +1,8 @@
 class Source < ApplicationRecord
 
+  has_one :template,
+    class_name: :SourceTemplate
+
   validates :code,
     presence:   true,
     uniqueness: true,
