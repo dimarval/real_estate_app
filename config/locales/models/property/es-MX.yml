@@ -28,7 +28,7 @@ es-MX:
         price_currency: Moneda
         date: Fecha
         published: Publicada
-        external_id: Id. Externa
+        external_id: Id. Externo
         external_agency: Agencia extarna
         exteranl_agency_id: Agencia externa
         external_url: URL externa

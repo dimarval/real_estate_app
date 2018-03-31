@@ -1,0 +1,68 @@
+<div class="card property">
+  <%= image_tag(property_picture_url(property),
+                class: 'card-image property-image') %>
+  <div class="property-publication-time">
+    <i class="far fa-clock"></i>
+    <%= property_publication_time(property) %>
+  </div>
+  <div class="card-body property-content">
+    <div class="property-content-header">
+      <h2 class="card-title">
+        <%= property_truncated_text(property.title, :short) %>
+      </h2>
+      <small>
+        <i class="fas fa-map-marker"></i>
+        <%= property.location %>
+      </small>
+    </div>
+    <div class="property-content-body">
+      <%= property_truncated_text(property.description, :long) %>
+    </div>
+    <div class="property-content-footer">
+      <ul class="property-property-features">
+        <% if property.rooms %>
+          <li data-toggle="tooltip"
+              data-placement="bottom"
+              title="<%= t('.rooms') %>">
+            <%= property.rooms %>
+            <i class="fas fa-bed"></i>
+          </li>
+        <% end %>
+        <% if property.bathrooms %>
+          <li data-toggle="tooltip"
+              data-placement="bottom"
+              title="<%= t('.bathrooms') %>">
+            <%= property.bathrooms %>
+            <i class="fas fa-bath"></i>
+          </li>
+        <% end %>
+        <% if property.parking %>
+          <li data-toggle="tooltip"
+              data-placement="bottom"
+              title="<%= t('.parking') %>">
+            <%= property.parking %>
+            <i class="fas fa-car"></i>
+          </li>
+        <% end %>
+        <% if property.plot_area %>
+          <li>
+            <%= property_area_with_unit(
+                  property.plot_area,
+                  property.plot_area_unit
+                ) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="card-footer property-footer">
+    <div class="row align-items-center">
+      <div class="col-8">
+        <%= property_operation_type(property) %>
+      </div>
+      <div class="col-4 text-right">
+        <%= property_price_with_currency(property) %>
+      </div>
+    </div>
+  </div>
+</div>

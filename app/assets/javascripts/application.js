@@ -13,5 +13,10 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery
+//= require popper.min
 //= require bootstrap.min
 //= require_tree .
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
