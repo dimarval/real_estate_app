@@ -7,4 +7,19 @@ module ApplicationHelper
     t(code, default_options.merge(options))
   end
 
+  def pagination(collection)
+    pagination_resume(collection) + pagination_links(collection)
+  end
+
+  def pagination_resume(collection)
+    page_entries_info(collection)
+  end
+
+  def pagination_links(collection)
+    will_paginate(
+      collection,
+      renderer: WillPaginate::ActionView::BootstrapLinkRenderer
+    )
+  end
+
 end

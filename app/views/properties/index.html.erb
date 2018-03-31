@@ -10,10 +10,12 @@
       <%= render property %>
     </div>
 
-    <% if index.odd? || (index.size - 1 == index) %>
+    <% if index.odd? || (@properties.size - 1 == index) %>
       </div>
     <% end %>
   <% end %>
 <% else %>
   <p><%= t('.no_properties') %></p>
 <% end %>
+
+<%= pagination(@properties) %>
