@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Fancy Real Estate Portal
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
+To create the enviroment first add your MySQL credentials on `db/database.yml`
+once added run
 
-* System dependencies
+    bundle install
+    bundle exec rake db:migrate:reset
+    bundle exec rake db:seeds
 
-* Configuration
+## Sync properties from XML file
 
-* Database creation
+To sync the list properties run following
 
-* Database initialization
+    XML_PATH=your/xml/path SOURCE=trovit bundle exec rake properties:sync
 
-* How to run the test suite
+## Run test
 
-* Services (job queues, cache servers, search engines, etc.)
+    bundle exec rspec spec/
 
-* Deployment instructions
-
-* ...

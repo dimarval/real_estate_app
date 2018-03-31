@@ -14,8 +14,9 @@
       </div>
     <% end %>
   <% end %>
+
+  <%= pagination(@properties) %>
 <% else %>
   <p><%= t('.no_properties') %></p>
 <% end %>
 
-<%= pagination(@properties) %>
