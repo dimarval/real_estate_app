@@ -30,7 +30,10 @@ es-MX:
         published: Publicada
         external_id: Id. Externo
         external_agency: Agencia extarna
-        exteranl_agency_id: Agencia externa
+        external_agency_id: Agencia externa
         external_url: URL externa
+        source: Fuente
+        source_id: Fuente
         created_at: Fecha de creación
         updated_at: Fecha de actualización
+        pictures: Imágenes

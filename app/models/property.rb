@@ -21,6 +21,9 @@ class Property < ApplicationRecord
     class_name: :Agency,
     optional:   true
 
+  belongs_to :source,
+    optional: true
+
   has_many :pictures,
     -> { order(:id) }
 

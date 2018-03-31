@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331141806) do
+ActiveRecord::Schema.define(version: 20180331143345) do
 
   create_table "agencies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", null: false
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20180331141806) do
     t.string "external_id", limit: 16
     t.bigint "external_agency_id"
     t.string "external_url"
+    t.bigint "source_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["external_agency_id"], name: "fk_rails_ccc7963312"
@@ -78,6 +79,7 @@ ActiveRecord::Schema.define(version: 20180331141806) do
     t.index ["operation_type_id"], name: "fk_rails_ac5823d935"
     t.index ["plot_area_unit_id"], name: "fk_rails_edf23fe9ba"
     t.index ["price_currency_id"], name: "fk_rails_d3abcf662a"
+    t.index ["source_id"], name: "fk_rails_18dbbd40be"
     t.index ["type_id"], name: "fk_rails_5a5aa39ebe"
   end
 
@@ -111,5 +113,6 @@ ActiveRecord::Schema.define(version: 20180331141806) do
   add_foreign_key "properties", "measurement_units", column: "plot_area_unit_id"
   add_foreign_key "properties", "operation_types"
   add_foreign_key "properties", "property_types", column: "type_id"
+  add_foreign_key "properties", "sources"
   add_foreign_key "source_templates", "sources"
 end
