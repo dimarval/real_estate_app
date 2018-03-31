@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module RealEstateApp
   class Application < Rails::Application
+
+    VERSION = File.readlines(File.expand_path('../../VERSION', __FILE__)).first.chomp
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
