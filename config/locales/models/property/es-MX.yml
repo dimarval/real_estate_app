@@ -1,0 +1,36 @@
+es-MX:
+  activerecord:
+    models:
+      property:
+        one: Propiedad
+        other: Propiedades
+    attributes:
+      property:
+        title: Título
+        content: Contenido
+        type: Tipo
+        type_id: Tipo
+        operation_type: Tipo de operación
+        operation_type_id: Tipo de operación
+        floor_area: Construcción
+        floor_area_unit: Unidad de la construcción
+        floor_area_unit_id: Unidad de la construcción
+        plot_area: Superficie
+        plot_area_unit: Unidad de la superficie
+        plot_area_unit_id: Unidad de la superficie
+        rooms: Habitaciones
+        bathrooms: Baños
+        parking: Estacionamiento
+        city: Ciudad
+        city_area: Colonia
+        region: Región
+        price: Precio
+        price_currency: Moneda
+        date: Fecha
+        published: Publicada
+        external_id: Id. Externa
+        external_agency: Agencia extarna
+        exteranl_agency_id: Agencia externa
+        external_url: URL externa
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
