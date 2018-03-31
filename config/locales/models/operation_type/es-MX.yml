@@ -1,0 +1,11 @@
+es-MX:
+  activerecord:
+    models:
+      operation_type:
+        one: Tipo de operación
+        other: Tipos de operación
+    attributes:
+      operation_type:
+        code: Código
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
