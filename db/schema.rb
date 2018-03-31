@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331132329) do
+ActiveRecord::Schema.define(version: 20180331141806) do
 
   create_table "agencies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", null: false
@@ -88,6 +88,14 @@ ActiveRecord::Schema.define(version: 20180331132329) do
     t.index ["code"], name: "index_property_types_on_code", unique: true
   end
 
+  create_table "source_templates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "source_id", null: false
+    t.text "content", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["source_id"], name: "fk_rails_613b3dd2c7"
+  end
+
   create_table "sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "code", limit: 16, null: false
     t.string "name", limit: 64, null: false
@@ -103,4 +111,5 @@ ActiveRecord::Schema.define(version: 20180331132329) do
   add_foreign_key "properties", "measurement_units", column: "plot_area_unit_id"
   add_foreign_key "properties", "operation_types"
   add_foreign_key "properties", "property_types", column: "type_id"
+  add_foreign_key "source_templates", "sources"
 end
