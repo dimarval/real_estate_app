@@ -7,6 +7,7 @@ Fancy Real Estate Portal
 To create the enviroment first add your MySQL credentials on `db/database.yml`
 once added run
 
+    bundle install
     bundle exec rake db:migrate:reset
     bundle exec rake db:seeds
 
