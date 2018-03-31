@@ -92,10 +92,6 @@ class Property < ApplicationRecord
   validates :external_id,
     length: { maximum: 16 }
 
-  validates :external_agency_id,
-    uniqueness: { scope: :external_id },
-    if:         :external_id
-
   validates :external_url,
     length: { maximum: 255 }
 

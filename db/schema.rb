@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20180331143345) do
     t.string "city", null: false
     t.string "city_area", null: false
     t.string "region", null: false
-    t.decimal "price", precision: 10, scale: 2
+    t.decimal "price", precision: 12, scale: 2
     t.bigint "price_currency_id"
     t.date "date", null: false
     t.boolean "published", default: true, null: false
@@ -74,7 +74,6 @@ ActiveRecord::Schema.define(version: 20180331143345) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["external_agency_id"], name: "fk_rails_ccc7963312"
-    t.index ["external_id", "external_agency_id"], name: "index_properties_on_external_id_and_external_agency_id", unique: true
     t.index ["floor_area_unit_id"], name: "fk_rails_6c265a27b9"
     t.index ["operation_type_id"], name: "fk_rails_ac5823d935"
     t.index ["plot_area_unit_id"], name: "fk_rails_edf23fe9ba"

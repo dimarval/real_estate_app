@@ -16,7 +16,7 @@ class CreateProperties < ActiveRecord::Migration[5.1]
       t.string  :city,                           null: false
       t.string  :city_area,                      null: false
       t.string  :region,                         null: false
-      t.decimal :price,                                      precision: 10, scale: 2
+      t.decimal :price,                                      precision: 12, scale: 2
       t.bigint  :price_currency_id
       t.date    :date,                           null: false
       t.boolean :published,                      null: false, default: true
@@ -26,8 +26,6 @@ class CreateProperties < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-
-    add_index :properties, [:external_id, :external_agency_id], unique: true
 
     add_foreign_key :properties, :property_types,    column: :type_id
     add_foreign_key :properties, :operation_types
