@@ -2,6 +2,6 @@ FactoryBot.define do
   factory :picture do
     association(:property)
 
-    url 'https://www.example.com/image'
+    sequence(:url) { |n| "https://www.example.com/image_#{n}" }
   end
 end
