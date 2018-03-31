@@ -1,0 +1,13 @@
+es-MX:
+  activerecord:
+    models:
+      picture:
+        one: Imagen
+        other: Imágenes
+    attributes:
+      currency:
+        property: Propiedad
+        porperty: Propiedades
+        url: URL
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180331025536) do
+ActiveRecord::Schema.define(version: 20180331035111) do
 
   create_table "agencies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", null: false
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 20180331025536) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_operation_types_on_code", unique: true
+  end
+
+  create_table "pictures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "property_id", null: false
+    t.string "url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["property_id", "url"], name: "index_pictures_on_property_id_and_url", unique: true
   end
 
   create_table "properties", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -80,6 +88,7 @@ ActiveRecord::Schema.define(version: 20180331025536) do
     t.index ["code"], name: "index_property_types_on_code", unique: true
   end
 
+  add_foreign_key "pictures", "properties", on_delete: :cascade
   add_foreign_key "properties", "agencies", column: "external_agency_id"
   add_foreign_key "properties", "currencies", column: "price_currency_id"
   add_foreign_key "properties", "measurement_units", column: "floor_area_unit_id"
