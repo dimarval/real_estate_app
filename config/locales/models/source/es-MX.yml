@@ -1,0 +1,12 @@
+es-MX:
+  activerecord:
+    models:
+      source:
+        one: Fuente
+        other: Fuentes
+    attributes:
+      source:
+        code: Código
+        name: Nombre
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
