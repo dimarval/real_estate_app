@@ -35,6 +35,13 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
+#Rails Engine that extends will_paginate stylings to match the pagination
+#styling conventions in Twitter's Bootstrap 4 toolkit.
+gem 'will_paginate-bootstrap4'
+
+#It can remove any of the emoji supported by that package.
+gem 'remove_emoji'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 #

@@ -1,0 +1,13 @@
+es-MX:
+  activerecord:
+    models:
+      source_template:
+        one: Plantilla de fuente
+        other: Plantillas de fuentes
+    attributes:
+      source_template:
+        source: Fuente
+        source_id: Fuente
+        contenido: Contenido
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización

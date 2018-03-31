@@ -1,0 +1,9 @@
+es-MX:
+  properties:
+    index:
+      title: Propiedades
+      no_properties: No hay propiedades que mostrar
+    property:
+      rooms: Cuartos
+      bathrooms: Baños
+      parking: Estacionamiento

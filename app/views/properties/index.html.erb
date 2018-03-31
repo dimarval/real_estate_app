@@ -1,0 +1,22 @@
+<% content_for(:title, t('.title')) %>
+
+<% if @properties.any? %>
+  <% @properties.each_with_index do |property, index| %>
+    <% if index.even? %>
+      <div class="row">
+    <% end %>
+
+    <div class="col-md-6">
+      <%= render property %>
+    </div>
+
+    <% if index.odd? || (@properties.size - 1 == index) %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <%= pagination(@properties) %>
+<% else %>
+  <p><%= t('.no_properties') %></p>
+<% end %>
+

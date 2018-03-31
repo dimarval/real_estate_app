@@ -1,0 +1,61 @@
+.property {
+  margin-bottom: 15px;
+  height: 550px;
+  position: relative;
+}
+
+.property-image {
+  max-height: 210px
+}
+
+.property-content {
+  position: relative;
+}
+
+.property-content-header,
+.property-content-body {
+  margin-bottom: 10px;
+}
+
+.property-content-header h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.property-content-footer {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+}
+
+.property-footer {
+  vertical-align: middle;
+}
+
+.property-property-features {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.property-property-features li {
+  float: left;
+}
+
+.property-property-features li + li {
+  margin-left: 10px;
+}
+
+.property-publication-time {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  border-radius: 5px;
+  opacity: .7;
+}

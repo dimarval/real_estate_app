@@ -5,6 +5,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="<%= "Real Estate App #{version}" %>">
 
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.ico', rel: 'shortcut icon', type: 'image/ico' %>
@@ -25,6 +26,8 @@
 
       <!-- Page Content -->
       <div class="container">
+        <h1><%= yield(:title) %></h1>
+
         <%= yield %>
       </div>
     </div>

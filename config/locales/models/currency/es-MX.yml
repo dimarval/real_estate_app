@@ -1,0 +1,11 @@
+es-MX:
+  activerecord:
+    models:
+      currency:
+        one: Moneda
+        other: Monedas
+    attributes:
+      currency:
+        code: Código
+        created_at: Fecha de creación
+        updated_at: Fecha de actualización
