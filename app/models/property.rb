@@ -87,10 +87,19 @@ class Property < ApplicationRecord
     inclusion: { in: [true, false] }
 
   validates :external_id,
-    uniqueness: { scope: :external_agency_id },
-    length:     { maximum: 16 }
+    length: { maximum: 16 }
+
+  validates :external_agency_id,
+    uniqueness: { scope: :external_id },
+    if:         :external_id
 
   validates :external_url,
     length: { maximum: 255 }
+
+  scope :published, -> { where(published: true) }
+
+  def location
+    [city, city_area, region].join(', ')
+  end
 
 end

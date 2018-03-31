@@ -215,9 +215,21 @@ describe Property do
     expect(property).not_to be_valid
   end
 
+  describe '.published' do
+
+    it 'retrives the properties published' do
+      property = FactoryBot.create(:property, published: true)
+
+      FactoryBot.create(:property, published: false)
+
+      expect(Property.published).to eq [property]
+    end
+
+  end
+
   describe '#pictures' do
 
-    it 'retrive the pictures ordered by id in ascending order' do
+    it 'retrives the pictures ordered by id in ascending order' do
       property.save
 
       picture_1 = FactoryBot.create(:picture, property: property)
