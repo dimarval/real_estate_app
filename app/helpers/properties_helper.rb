@@ -48,8 +48,11 @@ module PropertiesHelper
     traslation_operation = human_code_name_for(
       :operation_type,
       property.operation_type.code,
-      default: t('undefined', scope: 'helpers.property_operation_type')
     )
+
+    if traslation_operation == 'undefined'
+      traslation_operation = property.operation_type.code.capitalize
+    end
 
     traslation_operation += " (#{agency.name})" if agency
     traslation_operation
