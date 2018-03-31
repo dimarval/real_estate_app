@@ -1,0 +1,17 @@
+es-MX:
+  will_paginate:
+    next_label: ! '>>'
+    previous_label: ! '<<'
+    page_gap: "&hellip;"
+
+    page_entries_info:
+      single_page:
+        zero:  No hay registros
+        one: Sólo un registro encontrado
+        other: Mostrando los únicos %{count} registros
+      single_page_html:
+        zero:  No hay registros
+        one:   Sólo un registro encontrado
+        other: Mostrando <b>los únicos&nbsp;%{count}</b> registros
+      multi_page: Mostrando del %{from} - %{to} de %{count} registros
+      multi_page_html: Mostrando del <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b>%{count}</b> registros

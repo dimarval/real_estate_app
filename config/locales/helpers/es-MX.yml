@@ -1,0 +1,9 @@
+es-MX:
+  helpers:
+    property_area_with_unit:
+      undefined_unit: No definido
+    property_operation_type:
+      undefined: Operación no definida
+    property_publication_time:
+      one: 1 día
+      other: ! '%{count} días'
