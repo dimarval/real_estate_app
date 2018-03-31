@@ -21,6 +21,9 @@ class Property < ApplicationRecord
     class_name: :Agency,
     optional:   true
 
+  has_many :pictures,
+    -> { order(:id) }
+
   validates :title,
     presence: true,
     length:   { maximum: 255 }

@@ -215,4 +215,17 @@ describe Property do
     expect(property).not_to be_valid
   end
 
+  describe '#pictures' do
+
+    it 'retrive the pictures ordered by id in ascending order' do
+      property.save
+
+      picture_1 = FactoryBot.create(:picture, property: property)
+      picture_2 = FactoryBot.create(:picture, property: property)
+
+      expect(property.pictures).to eq [picture_1, picture_2]
+    end
+
+  end
+
 end
