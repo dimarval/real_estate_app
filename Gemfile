@@ -39,6 +39,9 @@ gem 'jbuilder', '~> 2.5'
 #styling conventions in Twitter's Bootstrap 4 toolkit.
 gem 'will_paginate-bootstrap4'
 
+#It can remove any of the emoji supported by that package.
+gem 'remove_emoji'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 #
