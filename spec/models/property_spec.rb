@@ -195,20 +195,6 @@ describe Property do
     expect(property).not_to be_valid
   end
 
-  it 'is invalid if the extenal_id in combination with external_agency_id ' \
-     'was already taken' do
-    property.external_id     = 'abcde123'
-    property.external_agency = FactoryBot.create(:agency)
-
-    FactoryBot.create(
-      :property,
-      external_id:     property.external_id,
-      external_agency: property.external_agency,
-    )
-
-    expect(property).not_to be_valid
-  end
-
   it 'is invalid if the external_url has more than 255 characters' do
     property.external_url = 'a' * 256
 
